@@ -13,11 +13,11 @@ int main(int argc, char const *argv[])
     vocals[4] = 'u';
 //%c sirve para imprimir una letra por cada posicion
 //%s sirve para imprimir las letras en cadena
-    printf("Vocal #1 %s\n", vocals[0]);
-    printf("Vocal #2 %s\n", vocals[1]);
-    printf("Vocal #3 %s\n", vocals[2]);
-    printf("Vocal #4 %s\n", vocals[3]);
-    printf("Vocal #5 %s\n", vocals[4]);
+    printf("Vocal #1 %c\n", vocals[0]);
+    printf("Vocal #2 %c\n", vocals[1]);
+    printf("Vocal #3 %c\n", vocals[2]);
+    printf("Vocal #4 %c\n", vocals[3]);
+    printf("Vocal #5 %c\n", vocals[4]);
 
 
 
