@@ -15,6 +15,10 @@ void eliminar(int id);
 CIUDAD buscar(int id);
 int menu();
 void principal();
+void pedirDatos();
+void mostrarDatos();
+void buscarxID();
+void editarDatos();
 
 void agregar(CIUDAD *c){
     ciudades[pos]= *c;
@@ -84,6 +88,12 @@ void eliminar(int id){
         case 1:
             pedirDatos();
             break;
+        case 4:
+            buscarxID();
+            break;
+        case 5:
+            mostrarDatos();
+            break;
         case 6:
             cout << "Adios, mi rey\n";
             break;
@@ -101,10 +111,36 @@ void eliminar(int id){
         cout << "ID: ";
         cin >> ciudad.id;
         cout << "Nombre: ";
-        cin >> ciudad.nombre;
+        scanf(" %[^\n]", ciudad.nombre);
         cout << "Descripcion: ";
-        cin >> ciudad.descripcion;
+        scanf(" %[^\n]", ciudad.descripcion);
         agregar(&ciudad);
         cout << "Registro Agregado...\n";
     }
+    
+    void mostrarDatos(){
+        for (int i = 0; i < pos; i++)
+        {
+            cout << "ID: " << ciudades[i].id << endl;
+            cout << "Nombre: " << ciudades[i].nombre << endl;
+            cout << "Descripcion: " << ciudades[i].descripcion << endl;
+        }
+    }
+    void buscarxID(){
+        int id;
+        cout << "Dime el ID de la ciudad a buscar: ";
+        cin >> id;
+        CIUDAD c;
+        c = buscar(id);
+        cout << "=================================" << endl;
+        cout << c.id << endl;
+        cout << c.nombre << endl;
+        cout << c.descripcion << endl;
+        cout << "=================================" << endl;
+    }
+    void editarDatos(){
+        int id;
+
+    }
+
     
